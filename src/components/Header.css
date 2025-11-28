@@ -1,0 +1,89 @@
+/* 🔷 TOP INFO BAR */
+.top-info-bar {
+  background: #111827;
+  color: white;
+  display: flex;
+  justify-content: flex-end;   /* 👉 SHIFTED TO THE RIGHT */
+  gap: 35px;
+  padding: 15px 40px;          /* 👉 Added horizontal padding for spacing */
+  font-size: 14px;
+}
+
+.top-info-item {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  opacity: 0.9;
+}
+
+.top-info-item svg {
+  color: #7dd3fc;
+}
+
+
+/* 🔷 MAIN HEADER */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background: rgb(53, 52, 52);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+/* 🔥 GRADIENT LOGO TEXT */
+.gradient-logo {
+  font-size: 34px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffb547, #ff6ea8, #8f5cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.gradient-logo span {
+  background: linear-gradient(90deg, #ff6ea8, #a762ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* NAVIGATION LINKS */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.nav-links a:hover {
+  color: #8f5cff;
+}
+
+/* RIGHT SECTION */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon {
+  cursor: pointer;
+  color: #333;
+}
+
+/* CART */
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+
+

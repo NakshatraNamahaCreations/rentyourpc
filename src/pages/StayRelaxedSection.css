@@ -1,0 +1,138 @@
+/* === STAY RELAXED SECTION === */
+.relaxed-wrapper {
+  width: 100%;
+  padding: 100px 0;
+  background: radial-gradient(circle at 20% 20%, #0b0c1c, #040617);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.relaxed-container {
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- TITLE --- */
+.relaxed-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #00e0ff;
+  margin-bottom: 18px;
+  animation: fadeDown 0.8s ease forwards;
+}
+
+.relaxed-subtitle {
+  color: #bfc8d2;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto 60px;
+  animation: fadeDown 1s ease forwards;
+}
+
+/* --- GRID --- */
+.relaxed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px 80px;
+  justify-items: start;
+}
+
+.relaxed-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* --- ICON --- */
+.relaxed-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00d2ff, #0078ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 26px;
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.relaxed-card:hover .relaxed-icon {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 35px rgba(0, 210, 255, 0.7);
+}
+
+/* --- INFO --- */
+.relaxed-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.relaxed-info p {
+  font-size: 15px;
+  color: #bfc8d2;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.relaxed-card:hover h3 {
+  color: #00e0ff;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .relaxed-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .relaxed-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .relaxed-title {
+    font-size: 32px;
+  }
+
+  .relaxed-subtitle {
+    font-size: 15px;
+  }
+}

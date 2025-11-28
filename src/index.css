@@ -1,0 +1,85 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* VIDEO WRAPPER */
+.video-background-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* FIXED + FULLSCREEN VIDEO */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  /* z-index: -10; */
+  pointer-events: none;
+  filter: none !important;   /* 🔥 ORIGINAL VIDEO COLOR */
+}
+
+/* REMOVED OVERLAY COMPLETELY */
+.video-overlay {
+  display: none !important;
+}
+
+/* CONTENT ABOVE EVERYTHING */
+.video-content {
+  position: relative;
+  z-index: 5;
+  padding-top: 100px;
+}
+
+/* Make text white (optional) */
+.video-content * {
+  color: #fff;
+}
+
+/* GLOBAL MOBILE RESPONSIVE UTILITIES */
+@media (max-width: 768px) {
+  .video-content {
+    padding-top: 60px;
+  }
+
+  .video-bg {
+    height: 100vh;
+  }
+
+  /* Ensure proper text sizing on mobile */
+  body {
+    font-size: 14px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Prevent horizontal scroll */
+  * {
+    max-width: 100%;
+  }
+
+  /* Better touch targets */
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-content {
+    padding-top: 50px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+}

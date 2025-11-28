@@ -1,0 +1,438 @@
+/* MAIN SECTION */
+.trending-section {
+  padding: 0px 5%;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 60px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff6ea8, #ffb547, #8f5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.trending-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.trending-header h2 {
+  font-size: 46px;
+  font-weight: 900;
+}
+
+.trending-header p {
+  color: #dcdcdc;
+  font-size: 18px;
+}
+
+/* TABS */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 14px 32px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  backdrop-filter: blur(8px);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tab-btn:hover {
+  transform: scale(1.07);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #ff6ea8, #8f5cff);
+  border: none;
+  transform: scale(1.15);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* LAPTOP CATEGORY CARDS */
+.laptop-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 30px;
+}
+
+.laptop-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 25px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 0.3s ease;
+}
+
+.laptop-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(255, 110, 168, 0.25);
+}
+
+.laptop-card-header {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.laptop-details {
+  list-style: none;
+  padding: 0;
+  color: #f1f1f1;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.laptop-details li {
+  margin-bottom: 8px;
+}
+
+/* CONTACT BUTTONS */
+.laptop-contact {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+/* WHATSAPP & CALL ICONS */
+.option-contact-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.option-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  font-size: 25px !important;
+  transition: 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.option-icon.whatsapp {
+  background: #25d366;
+
+}
+
+.option-icon.whatsapp:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.6);
+}
+
+.option-icon.call {
+  background: #007aff;
+}
+
+.option-icon.call:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 18px rgba(0, 122, 255, 0.6);
+}
+
+/* GAMING PACKAGE CARDS (unchanged) */
+.package-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.package-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+}
+
+.package-header {
+  font-size: 24px;
+  font-weight: 800;
+  padding: 16px;
+  border-radius: 14px;
+  width: 40%;
+  margin: 0 auto 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.package-desc {
+  color: #e6e6e6;
+  margin-bottom: 25px;
+
+      text-align: center;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.option-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 0.3s;
+}
+
+.option-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(255, 110, 168, 0.25);
+}
+
+.option-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.spec-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.bestfor {
+  color: #ffd7ef;
+  margin-top: 12px;
+}
+
+/* NORMAL PRODUCT GRID */
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.trend-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.trend-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.stock {
+  color: #b8ffcb;
+  font-size: 13px;
+}
+
+/* ================= MONITOR CARDS ================= */
+
+.monitor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .monitor-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
+.monitor-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  transition: 0.3s ease;
+  color: white;
+}
+
+.monitor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 45px rgba(255, 110, 168, 0.25);
+}
+
+.monitor-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.monitor-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #eaeaea;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.bestfor {
+  margin-top: 12px;
+  color: #ffd7ef;
+}
+
+.option-icon i {
+  color: white;
+  font-size: 22px !important;
+}
+/* MONITOR MAIN HEADINGS */
+.monitor-heading {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  margin: 50px auto 25px;
+  color: #fff;
+  background: rgba(255,255,255,0.10);
+  padding: 12px 24px;
+  border-radius: 14px;
+  width: max-content;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .trending-section {
+    padding: 0px 3%;
+  }
+
+  .trending-header h2 {
+    font-size: 32px;
+  }
+
+  .trending-header p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .category-tabs {
+    gap: 12px;
+    margin-bottom: 35px;
+    padding: 0 10px;
+  }
+
+  .tab-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .laptop-category-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .laptop-card {
+    padding: 20px;
+  }
+
+  .laptop-card-header {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .laptop-details {
+    font-size: 14px;
+  }
+
+  .package-card {
+    padding: 25px 20px;
+  }
+
+  .package-header {
+    font-size: 20px;
+    width: 90%;
+    padding: 12px;
+  }
+
+  .package-desc {
+    font-size: 14px;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .option-card {
+    padding: 18px;
+  }
+
+  .option-card h3 {
+    font-size: 18px;
+  }
+
+  .spec-list {
+    font-size: 14px;
+  }
+
+  .monitor-heading {
+    font-size: 22px;
+    padding: 10px 18px;
+    width: 95%;
+  }
+
+  .monitor-card {
+    padding: 20px;
+  }
+
+  .monitor-title {
+    font-size: 18px;
+  }
+
+  .monitor-specs {
+    font-size: 14px;
+  }
+
+  .trending-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trending-header h2 {
+    font-size: 26px;
+  }
+
+  .tab-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .package-header {
+    font-size: 18px;
+  }
+
+  .monitor-heading {
+    font-size: 20px;
+  }
+}
