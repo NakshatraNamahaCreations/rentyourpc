@@ -169,9 +169,7 @@
 }
 
 @media (max-width: 600px) {
-  .faq-section {
-    padding: 40px 15px;
-  }
+
 
   .faq-title {
     font-size: 24px;

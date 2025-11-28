@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaPhoneAlt,
@@ -10,8 +10,14 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const [showNumber, setShowNumber] = useState(false);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleCall = () => {
+    setShowNumber(!showNumber);
   };
 
   return (
@@ -54,6 +60,8 @@ const Footer = () => {
             Rent Your PC delivers high performance laptops, workstations,
             gaming PCs, and premium monitors at affordable rental plans.
           </p>
+
+          
         </div>
 
         {/* RIGHT SIDE LINKS */}
@@ -106,9 +114,19 @@ const Footer = () => {
         <FaArrowUp />
       </button>
 
-      <a href="tel:+919019677359" className="floating-btn call-btn">
-        <FaPhoneAlt />
-      </a>
+      <div className="call-btn-wrapper">
+        <button 
+          className="floating-btn call-btn"
+          onClick={handleCall}
+        >
+          <FaPhoneAlt />
+        </button>
+        {showNumber && (
+          <div className="call-number-display">
+            +91 9019677359
+          </div>
+        )}
+      </div>
 
       <a
         href="https://wa.me/919019677359?text=Hi! I want to rent a device."
@@ -190,14 +208,41 @@ const Footer = () => {
           line-height: 1.7;
         }
 
+        .footer-contact-info {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .footer-contact-link {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: #ccc;
+          text-decoration: none;
+          font-size: 14px;
+          transition: 0.2s;
+        }
+
+        .footer-contact-link:hover {
+          color: #ff6ea8;
+          transform: translateX(4px);
+        }
+
+        .footer-contact-link svg {
+          color: #ff6ea8;
+          flex-shrink: 0;
+        }
+
         .footer-right {
           display: flex;
-          gap: 50px;
+          // gap: 50px;
           flex-wrap: wrap;
         }
 
         .footer-col h4 {
-          font-size: 16px;
+          font-size: 18px !important;
           margin-bottom: 12px;
         }
 
@@ -205,7 +250,7 @@ const Footer = () => {
           display: block;
           margin: 8px 0;
           color: #ccc;
-          font-size: 14px;
+          font-size: 16px !important;
           text-decoration: none;
           transition: 0.2s;
         }
@@ -320,6 +365,22 @@ const Footer = () => {
             line-height: 1.5;
           }
 
+          .footer-contact-info {
+            margin-top: 15px;
+            gap: 8px;
+            align-items: center;
+          }
+
+          .footer-contact-link {
+            font-size: 11px;
+            gap: 6px;
+          }
+
+          .footer-contact-link svg {
+            width: 12px;
+            height: 12px;
+          }
+
           .footer-right {
             width: 100%;
             flex-direction: column;
@@ -376,7 +437,14 @@ const Footer = () => {
           }
 
           .call-btn {
-            bottom: 110px;
+            bottom: 90px;
+            top:20px;
+            left:5px;
+          }
+
+          .call-btn-wrapper {
+            bottom: 90px;
+            right: 15px;
           }
 
           .whatsapp-btn {
@@ -405,6 +473,21 @@ const Footer = () => {
           .footer-desc {
             font-size: 11px;
             margin-top: 6px;
+          }
+
+          .footer-contact-info {
+            margin-top: 12px;
+            gap: 6px;
+          }
+
+          .footer-contact-link {
+            font-size: 10px;
+            gap: 5px;
+          }
+
+          .footer-contact-link svg {
+            width: 11px;
+            height: 11px;
           }
 
           .footer-right {
@@ -436,6 +519,70 @@ const Footer = () => {
 
           .footer-policies a {
             font-size: 9px;
+          }
+        }
+
+        /* CALL NUMBER DISPLAY */
+        .call-btn-wrapper {
+          position: fixed;
+          right: 20px;
+          bottom: 130px;
+          z-index: 999;
+        }
+
+        .call-btn-wrapper .call-btn {
+          position: relative;
+          right: auto;
+          bottom: auto;
+        }
+
+        .call-number-display {
+          position: absolute;
+          bottom: 60px;
+          right: 0;
+          background: linear-gradient(135deg, rgba(10, 0, 31, 0.95), rgba(20, 0, 50, 0.95));
+          backdrop-filter: blur(10px);
+          color: #ff6ea8;
+          padding: 10px 15px;
+          border-radius: 10px;
+          font-size: 16px;
+          font-weight: 600;
+          white-space: nowrap;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+          border: 1px solid rgba(255, 110, 168, 0.3);
+          animation: fadeInUp 0.3s ease;
+          z-index: 1000;
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .call-number-display::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          right: 20px;
+          width: 10px;
+          height: 10px;
+          background: linear-gradient(135deg, rgba(10, 0, 31, 0.95), rgba(20, 0, 50, 0.95));
+          border-right: 1px solid rgba(255, 110, 168, 0.3);
+          border-bottom: 1px solid rgba(255, 110, 168, 0.3);
+          transform: rotate(45deg);
+        }
+
+        @media (max-width: 480px) {
+          .call-number-display {
+            font-size: 14px;
+            padding: 8px 12px;
+            bottom: 55px;
           }
         }
       `}</style>

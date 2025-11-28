@@ -159,14 +159,7 @@ const Header = () => {
 
         @media (max-width: 768px) {
           .top-info-bar {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 8px 12px;
-            padding: 6px 12px;
-            font-size: 9px;
-            justify-content: flex-start;
-            align-items: flex-start;
+            display: none;
           }
 
           .top-info-item {
@@ -227,29 +220,6 @@ const Header = () => {
           }
         }
 
-        @media (max-width: 480px) {
-          .top-info-bar {
-            padding: 5px 10px;
-            font-size: 8px;
-            gap: 6px 10px;
-          }
-
-          .top-info-item {
-            font-size: 8px;
-            gap: 3px;
-          }
-
-          .top-info-item span {
-            font-size: 8px;
-            line-height: 1.3;
-          }
-
-          .top-info-item svg {
-            width: 9px;
-            height: 9px;
-            margin-top: 2px;
-          }
-        }
 
         /* LOGO */
         .gradient-logo {

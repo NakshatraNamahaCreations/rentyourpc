@@ -100,13 +100,13 @@
 
 /* RIGHT SIDE */
 .footer-right {
-  display: flex;
+ 
   /* gap: 60px; */
   flex-wrap: wrap;
 }
 
 .footer-col h4 {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 15px;
   font-weight: 600;
   color: #fff;
@@ -114,7 +114,7 @@
 
 .footer-col p {
   color: #bbb;
-  font-size: 14px;
+  font-size: 18px;
   margin: 8px 0;
   cursor: pointer;
   transition: 0.3s;
